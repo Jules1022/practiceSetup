@@ -1,0 +1,53 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class LoginToLearningMaterials {
+
+    WebDriver driver;
+
+    @BeforeTest
+    public void launchBrowser() {
+        driver = new ChromeDriver();
+    }
+
+    @Test
+    public void startBrowser() throws InterruptedException {
+        driver.get("https://ndosiautomation.co.za/#practice");
+        driver.manage().window().maximize();
+        Thread.sleep(3000);
+    }
+
+    @Test(priority = 1)
+    public void verifyLoginHeading() {
+        driver.findElement(By.xpath("//*[@id=\"login-heading\"]")).isDisplayed();
+    }
+
+    @Test(priority = 2)
+    public void enteUsername() throws InterruptedException {
+        driver.findElement(By.xpath("//*[@id=\"login-email\"]")).sendKeys("seritej@gmail.com");
+        Thread.sleep(2000);
+    }
+
+    @Test(priority = 3)
+    public void enterPassword() throws InterruptedException {
+        driver.findElement(By.xpath("//*[@id=\"login-password\"]")).sendKeys("Jules88082@");
+        Thread.sleep(2000);
+    }
+
+    @Test(priority = 4)
+    public void clickLoginButton() {
+        driver.findElement(By.xpath("//*[@id=\"login-submit\"]")).click();
+    }
+
+
+    /*@AfterTest
+    public void tearDown(){
+        driver.quit();
+    }*/
+
+
+}
