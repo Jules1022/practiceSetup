@@ -11,3 +11,4 @@ This is a Selenium Java Framework for automated testing of web applications. It 
 1. Clone the repository to your local machine.
 2. Open the project in your preferred IDE (e.g., IntelliJ IDEA, Eclipse).
 3. Ensure you have Java and Maven installed on your system.
+4. Navigate to the project directory and run the following command to install dependencies:
