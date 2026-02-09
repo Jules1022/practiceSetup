@@ -27,7 +27,7 @@ public class LoginToLearningMaterials {
     }
 
     @Test(priority = 2)
-    public void enteUsername() throws InterruptedException {
+    public void enterUsername() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"login-email\"]")).sendKeys("seritej@gmail.com");
         Thread.sleep(2000);
     }
