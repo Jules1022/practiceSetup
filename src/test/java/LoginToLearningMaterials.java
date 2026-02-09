@@ -44,10 +44,10 @@ public class LoginToLearningMaterials {
     }
 
 
-    /*@AfterTest
+    @AfterTest
     public void tearDown(){
         driver.quit();
-    }*/
+    }
 
 
 }
