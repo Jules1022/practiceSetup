@@ -39,8 +39,9 @@ public class LoginToLearningMaterials {
     }
 
     @Test(priority = 4)
-    public void clickLoginButton() {
+    public void clickLoginButton() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"login-submit\"]")).click();
+        Thread.sleep(3000);
     }
 
 
